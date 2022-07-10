@@ -63,7 +63,11 @@ function! FS_ToggleFoldAroundSearch (opts)
         let &foldtext   = get(b:foldsearch, 'prevfoldtext',   s:DEFFOLDTEXT)
         let &foldlevel  = get(b:foldsearch, 'prevfoldlevel',  s:DEFFOLDLEVEL)
         let &foldexpr   = get(b:foldsearch, 'prevfoldexpr',   s:DEFFOLDEXPR)
-        let &foldmarker = get(b:foldsearch, 'prevfoldexpr',   s:DEFFOLDMARKER)
+
+        " Error detected while processing function FS_ToggleFoldAroundSearch:
+        " line   22:
+        " E536: Comma required
+        "let &foldmarker = get(b:foldsearch, 'prevfoldexpr',   s:DEFFOLDMARKER)
 
         " Remove autocommands for refolding for each new search...
         augroup FoldSearch
